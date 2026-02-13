@@ -79,7 +79,9 @@ export const ValentineCard: React.FC<Props> = ({
   }
 
   if (!audioRef.current) {
-    audioRef.current = new Audio(`${import.meta.env.BASE_URL}valentine_vibe.mp3`);
+   audioRef.current = new Audio(
+      `${import.meta.env.BASE_URL}valentine_vibe.mp3`
+    );
     audioRef.current.volume = 0.6;
     audioRef.current.loop = true;
   }
