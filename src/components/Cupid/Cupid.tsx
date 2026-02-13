@@ -20,9 +20,9 @@ export const Cupid: React.FC<Props> = ({ show = false }) => {
           <div className={styles.chest} />
           <div className={styles["arm-bottom"]} />
           <div className={styles.bow} />
-<div className={styles.arrow}>
-  <div className={styles["arrow-head"]}>❤</div>
-</div>
+          <div className={styles.arrow}>
+            <div className={styles["arrow-head"]}>❤</div>
+          </div>
           <div className={styles.arrow} />
           <div className={styles["arm-top"]} />
           <div className={styles.neck} />

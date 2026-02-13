@@ -281,7 +281,7 @@
   transform: translate(-95%, -50%) rotate(-90deg); 
   transform-origin: center;
   color: #E32636;
-  z-index: 2;
+  z-index: 99;
 
   -webkit-text-size-adjust: 100%;
 }
