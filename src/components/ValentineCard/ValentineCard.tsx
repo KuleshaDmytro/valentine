@@ -6,12 +6,10 @@ import { AcceptedValentineCard } from "./AcceptedValentineCard";
 type Props = {
   name?: string;
   onYes?: () => void;
-  resultImgSrc?: string;
 };
 
 export const ValentineCard: React.FC<Props> = ({
   onYes,
-  resultImgSrc,
 }) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -66,15 +64,16 @@ export const ValentineCard: React.FC<Props> = ({
     }
   };
 
-  const handleYes = async () => {
+  const handleYes = () => {
     setAccepted(true);
     onYes?.();
-    await playMusic();
+
+    void playMusic();
   };
 
   if (accepted) {
     return (
-      <AcceptedValentineCard resultImgSrc={resultImgSrc} />
+      <AcceptedValentineCard />
     );
   }
 
