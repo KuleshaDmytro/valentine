@@ -273,7 +273,7 @@
   display: grid;
   place-items: center;
 
-  font-size: 5.5em; 
+  font-size: 7.1em; 
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -281,7 +281,7 @@
   transform: translate(-95%, -50%) rotate(-90deg); 
   transform-origin: center;
   color: #E32636;
-  z-index: 99;
+  z-index: 9999;
 
   -webkit-text-size-adjust: 100%;
 }
