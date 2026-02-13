@@ -14,7 +14,10 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    color: #ffd5dd;
+    color: #ffd5dd !important;
+    opacity: 0.7;
+
+    font-size: 45px;
 
     will-change: transform, opacity;
     filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));

@@ -263,31 +263,27 @@
     linear-gradient(#000 0 0) 50% 50% / 100% 1em no-repeat;
 }
 
-
-
 .arrow-head {
   position: absolute;
-
   left: calc(100% + 0.6em);
   top: 50%;
 
-  transform: translate(-95%, -50%) rotate(-90deg);
-  transform-origin: center;
+  width: 1em;
+  height: 1em;
+  display: grid;
+  place-items: center;
 
-  font-size: 5.5em;
+  font-size: 5.5em; 
   line-height: 1;
+  padding: 0;
+  margin: 0;
 
+  transform: translate(-95%, -50%) rotate(-90deg); 
+  transform-origin: center;
   color: #E32636;
   z-index: 2;
 
-  display: block;
-  width: 1em;
-  height: 1em;
-  text-align: center;
-
-  pointer-events: none;
-
-  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 .leg {

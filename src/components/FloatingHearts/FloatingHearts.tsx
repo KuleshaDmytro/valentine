@@ -50,7 +50,7 @@ export const FloatingHearts: React.FC<Props> = ({ count = 27, speedSec = 7 }) =>
             } as React.CSSProperties
           }
         >
-          ❤
+          <span className={styles.heart}>♥</span>
         </span>
       ))}
     </div>
