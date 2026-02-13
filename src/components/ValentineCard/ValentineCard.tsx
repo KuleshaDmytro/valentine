@@ -50,27 +50,26 @@ export const ValentineCard: React.FC<Props> = ({
     }
   };
 
-  const fadeInAudio = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
+  const playMusic = async () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(
+        `${import.meta.env.BASE_URL}valentine_vibe.mp3`
+      );
+      audioRef.current.volume = 0.6;
+      audioRef.current.loop = true;
+    }
 
-    audio.volume = 0;
-    audio.play();
-
-    const step = 0.05;
-    const interval = setInterval(() => {
-      if (audio.volume < 0.6) {
-        audio.volume = Math.min(audio.volume + step, 0.6);
-      } else {
-        clearInterval(interval);
-      }
-    }, 100);
+    try {
+      await audioRef.current.play();
+    } catch (err) {
+      console.log("Audio blocked:", err);
+    }
   };
 
-  const handleYes = () => {
+  const handleYes = async () => {
     setAccepted(true);
     onYes?.();
-    fadeInAudio();
+    await playMusic();
   };
 
   if (accepted) {
@@ -80,7 +79,7 @@ export const ValentineCard: React.FC<Props> = ({
   }
 
   if (!audioRef.current) {
-    audioRef.current = new Audio("/src/mp3/valentine_vibe.MP3");
+    audioRef.current = new Audio(`${import.meta.env.BASE_URL}valentine_vibe.mp3`);
     audioRef.current.volume = 0.6;
     audioRef.current.loop = true;
   }
