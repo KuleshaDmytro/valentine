@@ -3,7 +3,7 @@
     inset: 0;
     pointer-events: none;
     overflow: hidden;
-    z-index: 0;
+    z-index: 9999;
 }
 
 .heart {
@@ -13,6 +13,8 @@
     animation-name: riseAndFade;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+    color: #ffd5dd;
 
     will-change: transform, opacity;
     filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));
